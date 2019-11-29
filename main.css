@@ -1,0 +1,272 @@
+.colors {
+  color: #1A202B;
+  color: #123D74; 
+  color: #144674; 
+  color: #4B6F8C;
+  color: #9BAEBF;
+  color: #F2F2F2;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button{
+  cursor: pointer;
+  border: none;
+}
+
+/* Header styling */
+
+header {
+  height: 50px;
+  width: 100vw;
+  background: #144674;
+  position: absolute;
+  box-shadow: 0px 3px 5px #777;
+}
+
+header>h1{
+  display: block;
+  text-align: right;
+  line-height: 50px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.5rem;
+  color: #F3F3F3;
+  padding-right: 1rem;
+}
+
+/* Main section styles */
+
+main{
+  /* background: #1A202B; */
+  height: calc(100vh - 50px);
+  width: 100vw;
+  position: relative;
+  top: 50px;
+}
+
+/*********** Sidebar Styles ***********/
+
+.sidebar{
+  color: #eee;
+  height: calc(100% - 1rem);
+  width: 350px;
+  background: #ccc;
+  float: left;
+  margin: 0.5rem 0 0 0.5rem;
+  position: relative;
+  
+}
+
+#form-generic{
+
+}
+
+#form-each{
+  position: relative;
+  top: -1rem;
+  display: none;
+}
+
+#form-each.form-show{
+  display: block;
+}
+
+#form-sqm{
+  position: relative;
+  top: -1rem;
+  display: none;
+}
+
+#form-sqm.form-show{
+  display: block;
+}
+
+#form-lm{
+  position: relative;
+  top: -1rem;
+  display: none;
+}
+
+#form-lm.form-show{
+  display: block;
+}
+
+#form-cover{
+  position: relative;
+  top: -1rem;
+  display: none;
+}
+
+#form-cover.form-show{
+  display: block;
+}
+
+#form-spaced{
+  position: relative;
+  top: -1rem;
+  display: none;
+}
+
+#form-spaced.form-show{
+  display: block;
+}
+
+.form-buttons{
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+}
+
+#form-submit{
+  padding: 0.5rem;
+  margin-left: 1rem;
+  width: 65%;
+  display: inline-block;
+  background: #82C601;
+  color: rgb(39, 59, 0);
+  font-size: 0.9rem;
+}
+
+#form-reset{
+  padding: 0.5rem;
+  width: 25%;
+  display: inline-block;
+  background: #E71A37;
+  color: rgb(231, 178, 185);
+  font-size: 0.9rem;
+}
+
+.form-select {
+  display: block;
+  width: 100%;
+  position: relative;
+  background: #777;
+}
+
+.form-options {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  line-height: 50px;
+  list-style-type: none;
+}
+
+.form-option{
+  cursor: pointer;
+  width: 20%;
+  height: 50px;
+  border-bottom: 1.5px solid #ddd;
+  background: #777;
+  color: #eee;
+}
+.form-option.selected-form{
+  border-bottom: none;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background: #ccc;
+  color: #333;
+  border: 1.5px solid #ddd;
+  border-bottom-color: transparent;
+}
+
+.form-option:first-of-type{
+  border-top-left-radius: 0px;
+  border-left: none;
+}
+
+.form-option:last-of-type{
+  border-top-right-radius: 0px;
+  border-right: none;
+}
+
+.form-container {
+  width: 96%;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+
+.form-group{
+  padding: 0.5rem;
+}
+
+.form-group>*{
+  display: block;
+  width: 100%;
+}
+
+.form-group>input{
+  margin-bottom: 0.75rem;
+}
+
+.form-group>input[type='text']{
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.form-group>label{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #3571AE;
+  padding: 0.25rem;
+}
+
+.form-group>button{
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.form-group>button[type="submit"]{
+  background: lightgreen;
+  border: none;
+}
+
+/*********** Material List Styles ***********/
+
+#material-container {
+  width: calc(100% - 350px - 0.5rem);
+  float: right;
+  padding: 0.5rem;
+}
+
+table#material-list{
+  background: #eee;
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+#material-list thead{
+  background: #123D74;
+  
+}
+
+#material-list th{
+  padding: 0.75rem 0.5rem;
+  font-weight: 500;
+  color: #F2F2F2;
+}
+
+#material-list tr{
+  border-bottom: 0.1rem solid #ccc;
+}
+
+#material-list>thead>tr{
+  border-bottom: 0.1rem solid #1A202B;
+}
+
+#material-list td{
+  padding: 0.75rem 0.5rem;
+  color: #333;
+}

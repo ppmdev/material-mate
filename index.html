@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>MATERIAL MATE</h1>
+    </header>
+    <main>
+        <div class="sidebar">
+            <div class="form-select">
+                <ul class="form-options">
+                    <li class="form-option selected-form" id="each-form-select">Each</li>
+                    <li class="form-option" id="sqm-form-select">Sqm</li>
+                    <li class="form-option" id="lm-form-select">Lm</li>
+                    <li class="form-option" id="cover-form-select">Cover</li>
+                    <li class="form-option" id="spaced-form-select">Spaced</li>
+                </ul>
+            </div>
+            <div class="form-container"> 
+                <form>
+                    <div class="form-group" id="form-generic">
+                        <label for="material">Material</label>
+                        <input type="text" name="material" id="material-input" placeholder="What type of material?">
+                        <label for="supplier">Supplier</label>
+                        <input type="text" name="supplier" id="supplier-input" placeholder="Who is the supplier?">
+                        <label for="price">Price</label>
+                        <input type="text" name="price" id="price-input" placeholder="How much do they cost?">
+                    </div>
+                </form>
+                <form>            
+                    <div class="form-group form-show" id="form-each">
+                        <label for="quantity">Quantity</label>
+                        <input type="text" name="quantity" id="each-quantity-input" placeholder="How many do you need?">
+                    </div>
+                </form>
+                <form>
+                    <div class="form-group" id="form-sqm">
+                        <label for="sqmAreaX">Area X</label>
+                        <input type="text" name="sqmAreaX" id="sqm-x-input" placeholder="i.e. Area width">
+                        <label for="sqmAreaY">Area Y</label>
+                        <input type="text" name="sqmAreaX" id="sqm-y-input" placeholder="i.e. Area Length">
+                    </div>
+                </form>
+                <form>
+                    <div class="form-group" id="form-lm">
+                        <label for="totalLength">Total Length</label>
+                        <input type="text" name="totalLength" id="lm-length-input" placeholder="Total Lineal metres needed">
+                    </div>
+                </form>
+                <form>
+                    <div class="form-group" id="form-cover">
+                        <label for="areaX">Area X</label>
+                        <input type="text" name="areaX" id="cover-x-input" placeholder="i.e. Area width">
+                        <label for="quantity">Area Y</label>
+                        <input type="text" name="areaY" id="cover-y-input" placeholder="i.e. Area Length">
+                        <label for="matX">Material X</label>
+                        <input type="text" name="matX" id="cover-matX-input" placeholder="i.e. Material width">
+                        <label for="matY">Material Y</label>
+                        <input type="text" name="matY" id="cover-matY-input" placeholder="i.e. Material Length">
+                    </div>
+                </form>
+                <form>
+                    <div class="form-group" id="form-spaced">
+                        <label for="totalLength">Total Length</label>
+                        <input type="text" name="spacedLength" id="spaced-length-input" placeholder="i.e. Length between first and last item">                    
+                        <label for="spacing">Spacing</label>
+                        <input type="text" name="spacing" id="spaced-spacing-input" placeholder="i.e. Spacing between items">                    
+                    </div>
+                </form>
+            </div>
+            <div class="form-buttons">
+                <button type="submit" id="form-submit">Add Material</button>
+                <button type="reset" id="form-reset">Clear</button>
+            </div>
+            
+        </div>
+        <div id="material-container">
+            <table id="material-list">
+                <thead>
+                    <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">MATERIAL</th>
+                    <th scope="col">SUPPLIER</th>
+                    <th scope="col">QUANTITY</th>
+                    <th scope="col">PRICE</th>
+                    <th scope="col">COST</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody id="table-area">
+                    
+                    <tr>
+                        <td>ID</td>
+                        <td>MATERIAL</td>
+                        <td>SUPPLIER</td>
+                        <td>QUANTITY</td>
+                        <td>PRICE</td>
+                        <td>COST</td>
+                        <td>checkbox</td>
+                        <td>edit</td>
+                        <td>delete</td>
+                    </tr>
+                </tbody>
+        </table>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
