@@ -14,7 +14,6 @@
 }
 
 body {
-  height: 100vh;
   width: 100vw;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -48,8 +47,7 @@ header>h1{
 
 main{
   /* background: #1A202B; */
-  height: calc(100vh - 50px);
-  width: 100vw;
+  width: 100%;
   position: relative;
   top: 50px;
 }
@@ -58,7 +56,6 @@ main{
 
 .sidebar{
   color: #eee;
-  height: calc(100% - 1rem);
   width: 350px;
   background: #ccc;
   float: left;
@@ -67,8 +64,23 @@ main{
   
 }
 
-#form-generic{
+#alert-box{
+  text-align: center;
+  background: #fff;
+}
 
+.alert-danger{
+  border: 0.15rem solid #E71A37;
+  color: #E71A37;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+}
+
+.alert-success{
+  border: 0.15rem solid #05ad13;
+  color: #05ad13;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
 }
 
 #form-each{
@@ -121,19 +133,27 @@ main{
   display: block;
 }
 
-.form-buttons{
-  position: absolute;
-  bottom: 1rem;
-  width: 100%;
+#form-buttons{
+  padding-bottom: 2rem;
+}
+
+/* Form Buttons */
+
+#submit-buttons{
+  display: block;
+}
+
+#edit-buttons{
+  display: none;
 }
 
 #form-submit{
   padding: 0.5rem;
-  margin-left: 1rem;
+  margin-left: 0.5rem;
   width: 65%;
   display: inline-block;
-  background: #82C601;
-  color: rgb(39, 59, 0);
+  background: #05ad13;
+  color: #eee;
   font-size: 0.9rem;
 }
 
@@ -141,8 +161,27 @@ main{
   padding: 0.5rem;
   width: 25%;
   display: inline-block;
-  background: #E71A37;
-  color: rgb(231, 178, 185);
+  background: rgb(88, 88, 88);
+  color: #eee;
+  font-size: 0.9rem;
+}
+
+#form-update{
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+  width: 65%;
+  display: inline-block;
+  background: #0798c4;
+  color: #eee;
+  font-size: 0.9rem;
+}
+
+#form-cancel{
+  padding: 0.5rem;
+  width: 25%;
+  display: inline-block;
+  background: rgb(223, 37, 37);
+  color: #eee;
   font-size: 0.9rem;
 }
 
@@ -153,23 +192,38 @@ main{
   background: #777;
 }
 
-.form-options {
+#form-edit {
+  display: none;
+  width: 100%;
+  height: 46px;
+  background: rgb(255, 208, 0);
+  color: #333;
+  text-align: center;
+}
+
+#form-edit>p {
+  line-height: 46px;
+  font-size: 1.25rem;
+}
+
+#form-options {
   display: flex;
   justify-content: center;
   align-content: center;
   text-align: center;
-  line-height: 50px;
+  line-height: 46px;
   list-style-type: none;
 }
 
 .form-option{
   cursor: pointer;
   width: 20%;
-  height: 50px;
+  height: 46px;
   border-bottom: 1.5px solid #ddd;
   background: #777;
   color: #eee;
 }
+
 .form-option.selected-form{
   border-bottom: none;
   border-top-left-radius: 15px;
@@ -207,11 +261,30 @@ main{
 
 .form-group>input{
   margin-bottom: 0.75rem;
+  border-radius: 3px;
+  border: none;
 }
 
 .form-group>input[type='text']{
   padding: 0.5rem;
   font-size: 1rem;
+}
+.form-group>input[type='number']{
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Chrome, Safari, Edge, Opera - Hide spinner arrows for number input */
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+/* Firefox - Hide spinner arrows for number input */
+input[type=number] {
+  -moz-appearance:textfield;
 }
 
 .form-group>label{
@@ -224,10 +297,6 @@ main{
   padding: 0.5rem;
   font-size: 1rem;
   border-radius: 5px;
-}
-
-.form-group>button[type="submit"]{
-  background: lightgreen;
   border: none;
 }
 
